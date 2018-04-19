@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # encoding=utf-8
 import requests as requests
-from urllib import quote
+from urllib.parse import quote
 
 
 def buildQueryWithoutEncode(params):
