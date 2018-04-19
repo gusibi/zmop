@@ -50,7 +50,7 @@ class ZmopClient():
             if self.logRequest:
                 self.__logInfo('request', 'RequestUrl:%s%sContent:%s' % (
                     requestUrl, self.logSeparator, json.dumps(encryptedApiParams)))
-        except ValueError, e:
+        except ValueError as e:
             self.__logInfo('comm', '%s%s%s%sHTTP_ERROR:%s' % (
                 sysParams['method'], self.logSeparator, requestUrl, self.logSeparator, e))
             raise ValueError("CurlError:%s" % (e))
